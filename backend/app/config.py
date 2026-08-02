@@ -10,7 +10,7 @@ class Settings:
     CORS_ORIGINS: list[str] = _csv(
         os.getenv(
             "CORS_ORIGINS",
-            "http://localhost:5173,http://127.0.0.1:5173,https://*.monkeycode-ai.live",
+            "http://localhost:5173,http://127.0.0.1:5173",
         )
     )
 
