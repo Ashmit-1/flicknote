@@ -1,0 +1,26 @@
+# Virtual environment and Python artifacts
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+
+# Local SQLite database files (persisted via a named volume in production)
+*.db
+*.db-journal
+*.sqlite
+*.sqlite3
+
+# Tests are not needed at runtime
+tests/
+
+# Local secrets / env files
+.env
+.env.*
+
+# Docker / git metadata
+Dockerfile
+.dockerignore
+docker-compose*.yml
+.git
+.gitignore
