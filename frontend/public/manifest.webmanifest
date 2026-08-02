@@ -1,21 +1,35 @@
 {
-  "name": "FlickNote",
-  "short_name": "FlickNote",
-  "description": "A simple task list with tags, offline support and sync.",
+  "name": "Flicknote",
+  "short_name": "Flicknote",
+  "description": "Jot now, sift later.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#0f172a",
-  "theme_color": "#0f172a",
+  "background_color": "#5B6CFF",
+  "theme_color": "#5B6CFF",
   "icons": [
     {
-      "src": "/icons/icon-192.png",
+      "src": "/icons/flicknote-icon-192-regular.png",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any"
     },
     {
-      "src": "/icons/icon-512.png",
+      "src": "/icons/flicknote-icon-512-regular.png",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/flicknote-icon-192-maskable.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/icons/flicknote-icon-512-maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
     }
   ]
 }
