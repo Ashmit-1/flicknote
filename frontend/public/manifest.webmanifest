@@ -1,6 +1,6 @@
 {
-  "name": "QuickNotes",
-  "short_name": "QuickNotes",
+  "name": "FlickNote",
+  "short_name": "FlickNote",
   "description": "A simple task list with tags, offline support and sync.",
   "start_url": "/",
   "display": "standalone",

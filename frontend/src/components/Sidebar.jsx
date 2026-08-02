@@ -16,7 +16,7 @@ export default function Sidebar({
       {open && <div className="overlay" onClick={onClose} />}
       <aside className={`sidebar ${open ? 'open' : ''}`}>
         <div className="sidebar-header">
-          <h2>QuickNotes</h2>
+          <h2>FlickNote</h2>
           <button type="button" className="icon-btn" onClick={onClose} aria-label="Close menu">
             <X size={22} />
           </button>

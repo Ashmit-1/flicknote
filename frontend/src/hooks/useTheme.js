@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from 'react'
 
-const THEME_KEY = 'quicknotes:theme'
+const THEME_KEY = 'flicknote:theme'
 const DARK_BG = '#0b1120'
 const LIGHT_BG = '#0f172a'
 

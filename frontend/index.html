@@ -8,13 +8,13 @@
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-    <meta name="apple-mobile-web-app-title" content="QuickNotes" />
+    <meta name="apple-mobile-web-app-title" content="FlickNote" />
     <link rel="manifest" href="/manifest.webmanifest" />
     <link rel="apple-touch-icon" href="/icons/icon-192.png" />
-    <title>QuickNotes</title>
+    <title>FlickNote</title>
     <script>
       ;(function () {
-        var theme = localStorage.getItem('quicknotes:theme') || 'system'
+        var theme = localStorage.getItem('flicknote:theme') || 'system'
         var dark =
           theme === 'dark' ||
           (theme === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches)

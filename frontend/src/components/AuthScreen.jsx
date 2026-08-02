@@ -34,7 +34,7 @@ export default function AuthScreen({ login, register, error }) {
         <div className="auth-logo">
           <CheckSquare size={40} strokeWidth={1.5} />
         </div>
-        <h1>QuickNotes</h1>
+        <h1>FlickNote</h1>
         <p className="auth-subtitle">
           {mode === 'login'
             ? 'Sign in to your task list'

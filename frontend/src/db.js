@@ -1,8 +1,8 @@
 import localforage from 'localforage'
 
 const store = localforage.createInstance({
-  name: 'quicknotes',
-  storeName: 'quicknotes_data',
+  name: 'flicknote',
+  storeName: 'flicknote_data',
 })
 
 const authKey = 'auth'
