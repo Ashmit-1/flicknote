@@ -16,7 +16,10 @@ export default function Sidebar({
       {open && <div className="overlay" onClick={onClose} />}
       <aside className={`sidebar ${open ? 'open' : ''}`}>
         <div className="sidebar-header">
-          <h2>FlickNote</h2>
+          <div className="brand">
+            <img src="/icon.png" alt="FlickNote logo" className="brand-logo" />
+            <h2>FlickNote</h2>
+          </div>
           <button type="button" className="icon-btn" onClick={onClose} aria-label="Close menu">
             <X size={22} />
           </button>

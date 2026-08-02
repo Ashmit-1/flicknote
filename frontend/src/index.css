@@ -487,6 +487,22 @@ input {
   font-size: 20px;
 }
 
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.brand-logo {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  flex-shrink: 0;
+}
+
 .sidebar-nav {
   flex: 1;
   overflow-y: auto;
@@ -694,9 +710,17 @@ input {
 }
 
 .auth-logo {
-  color: var(--primary);
   display: flex;
   justify-content: center;
+}
+
+.auth-logo-img {
+  width: 64px;
+  height: 64px;
+  max-width: 100%;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
 }
 
 .auth-card h1 {

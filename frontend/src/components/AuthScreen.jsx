@@ -1,7 +1,5 @@
 import { useState } from 'react'
 
-import { CheckSquare } from 'lucide-react'
-
 export default function AuthScreen({ login, register, error }) {
   const [mode, setMode] = useState('login')
   const [username, setUsername] = useState('')
@@ -32,7 +30,7 @@ export default function AuthScreen({ login, register, error }) {
     <div className="auth-screen">
       <div className="auth-card">
         <div className="auth-logo">
-          <CheckSquare size={40} strokeWidth={1.5} />
+          <img src="/icon.png" alt="FlickNote logo" className="auth-logo-img" />
         </div>
         <h1>FlickNote</h1>
         <p className="auth-subtitle">
