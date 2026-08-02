@@ -8,9 +8,8 @@ services:
       # Absolute path inside the container; the named volume below is mounted at /data.
       DATABASE_URL: sqlite:////data/quicknotes.db
       # Comma-separated frontend origin(s). If a .env file with CORS_ORIGINS is
-      # present next to this file, Compose uses it; otherwise the fallback
-      # (localhost + *.monkeycode-ai.live) applies.
-      CORS_ORIGINS: ${CORS_ORIGINS:-http://localhost:5173,http://127.0.0.1:5173,https://*.monkeycode-ai.live}
+      # present next to this file, Compose uses it.
+      CORS_ORIGINS: ${CORS_ORIGINS:-http://localhost:5173,http://127.0.0.1:5173}
     volumes:
       - quicknotes_data:/data
 
