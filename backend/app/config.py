@@ -6,7 +6,7 @@ def _csv(value: str) -> list[str]:
 
 
 class Settings:
-    DATABASE_URL: str = os.getenv("DATABASE_URL", "sqlite:///./quicknotes.db")
+    DATABASE_URL: str = os.getenv("DATABASE_URL", "sqlite:///./flicknote.db")
     CORS_ORIGINS: list[str] = _csv(
         os.getenv(
             "CORS_ORIGINS",
