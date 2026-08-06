@@ -1,4 +1,4 @@
-# QuickNotes
+# Flicknote
 
 A simple, mobile-first task list PWA with tags, offline support and manual sync.
 
