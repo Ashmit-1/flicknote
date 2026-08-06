@@ -9,6 +9,7 @@ import TaskItem from './components/TaskItem'
 import { useAuth } from './hooks/useAuth'
 import { useTasks } from './hooks/useTasks'
 import { useTheme } from './hooks/useTheme'
+import { applyThemeAwareManifest, useInstallPrompt } from './pwa'
 import { ts } from './utils'
 
 export default function App() {
@@ -51,7 +52,8 @@ function Main({ auth, logout }) {
   const [editingTask, setEditingTask] = useState(null)
   const [online, setOnline] = useState(navigator.onLine)
   const autoSyncedRef = useRef(false)
-  const { theme, setTheme } = useTheme()
+  const installPrompt = useInstallPrompt()
+  const { theme, resolved, setTheme } = useTheme()
 
   const isMobile = () => window.matchMedia('(max-width: 899px)').matches
 
@@ -75,6 +77,10 @@ function Main({ auth, logout }) {
       window.removeEventListener('offline', goOffline)
     }
   }, [])
+
+  useEffect(() => {
+    applyThemeAwareManifest(resolved)
+  }, [resolved])
 
   useEffect(() => {
     if (loaded && online && !autoSyncedRef.current) {
@@ -318,6 +324,10 @@ function Main({ auth, logout }) {
         logout={logout}
         theme={theme}
         onThemeChange={setTheme}
+        canInstall={installPrompt.canInstall}
+        installed={installPrompt.installed}
+        isIos={installPrompt.isIos}
+        onInstall={installPrompt.install}
       />
 
       {formOpen && (

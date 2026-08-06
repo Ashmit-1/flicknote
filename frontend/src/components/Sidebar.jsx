@@ -1,4 +1,6 @@
-import { Inbox, LogOut, Monitor, Moon, Sun, Tag as TagIcon, X } from 'lucide-react'
+import { useState } from 'react'
+
+import { Download, Inbox, LogOut, Monitor, Moon, Sun, Tag as TagIcon, X } from 'lucide-react'
 
 export default function Sidebar({
   open,
@@ -10,7 +12,13 @@ export default function Sidebar({
   logout,
   theme,
   onThemeChange,
+  canInstall,
+  installed,
+  isIos,
+  onInstall,
 }) {
+  const [showIosHint, setShowIosHint] = useState(false)
+
   return (
     <>
       {open && <div className="overlay" onClick={onClose} />}
@@ -80,6 +88,24 @@ export default function Sidebar({
         </nav>
 
         <div className="sidebar-footer">
+          {!installed && (canInstall || isIos) && (
+            <>
+              <button
+                type="button"
+                className="sidebar-item"
+                onClick={() => (canInstall ? onInstall() : setShowIosHint((s) => !s))}
+              >
+                <Download size={18} />
+                <span>Install app</span>
+              </button>
+              {isIos && showIosHint && (
+                <p className="install-hint">
+                  Open this page in Safari, tap the Share button, then choose “Add to Home
+                  Screen”.
+                </p>
+              )}
+            </>
+          )}
           <button type="button" className="sidebar-item" onClick={logout}>
             <LogOut size={18} />
             <span>Log out</span>
