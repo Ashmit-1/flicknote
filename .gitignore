@@ -177,3 +177,4 @@ backend/*.db
 *.lz
 *.lzma
 *.iso
+frontend/frontend.md
